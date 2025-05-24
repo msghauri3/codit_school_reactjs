@@ -10,9 +10,10 @@ function NavbarHome() {
 
       {/* Nav links */}
       <Nav className="me-auto">
-        <Nav.Link href="hr">Human Resources (HR)</Nav.Link>
-        <Nav.Link href="reports">Reports & Analytics</Nav.Link>
-        <Nav.Link href="#settings-admin">Settings / Administration</Nav.Link>
+        <Nav.Link href="hr">HR</Nav.Link>
+        <Nav.Link href="reports">Reports</Nav.Link>
+        <Nav.Link href="reports">Analytics</Nav.Link>
+        <Nav.Link href="#settings-admin">Administration</Nav.Link>
       </Nav>
 
       {/* Right aligned Nav for Login and Settings */}

@@ -9,7 +9,7 @@ function SidebarLayout({ children }) {
       <Row className="d-flex flex-nowrap">
         {/* Sidebar */}
         <Col className="sidebar text-white min-vh-100 p-3">
-          <h5 className="mb-4">Sidebar</h5>
+          <h5 className="mb-4">HR</h5>
           <Nav className="flex-column">
             <Nav.Link as={NavLink} to="/" end className="text-white">Home</Nav.Link>
             <Nav.Link as={NavLink} to="/about" className="text-white">About</Nav.Link>

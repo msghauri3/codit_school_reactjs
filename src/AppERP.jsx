@@ -9,6 +9,7 @@ import Topbar from './Home_Interface/TopBar'
 import Navbar from './Home_Interface/Navbar'
 import Sidebar from './Home_Interface/Sidebar'
 import ReportsPayRoll from './Pay_Roll/Reports'
+import hr from './Pay_Roll/hr';
 
 
 function AppERP() {
@@ -37,6 +38,7 @@ function AppERP() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
+             <Route path="/hr" element={<hr />} />
             </Routes>
           </Col>
         </Row>
