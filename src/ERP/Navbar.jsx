@@ -10,8 +10,8 @@ function NavbarHome() {
 
       {/* Nav links */}
       <Nav className="me-auto">
-        <Nav.Link href="HR">Payroll</Nav.Link>
-        <Nav.Link href="Reports">Payroll Setup</Nav.Link>
+        <Nav.Link href="/Home">Payroll</Nav.Link>
+        <Nav.Link href="/PayrollSetup">Payroll Setup</Nav.Link>
         <Nav.Link href="Analytics">Analytics</Nav.Link>
         <Nav.Link href="Administration">Administration</Nav.Link>
       </Nav>

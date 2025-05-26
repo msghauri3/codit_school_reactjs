@@ -15,20 +15,27 @@ import HR from './HRM/HR';
 import Analytics from './HRM/Analytics';
 import Administration from './HRM/Administration';
 import Login from './HRM/Login';
-import Settings from './HRM/Settings'
+import Settings from './HRM/Settings';
+import Home from './HRM/Home';
 import Employees from './HRM/Employees';
+import GeneratePayroll from './HRM/GeneratePayroll';
+import LeaveManagement from './HRM/LeaveManagement';
+import PayrollSetup from './HRM/PayrollSetup';
+import TaxSetup from './HRM/TaxSetup';
+
+
 
 
 
 function AppERP() {
   return (
     <Router>
-      <Container fluid>  
+      <Container fluid>
         <Row >
-        <Topbar />
-        <Navbar />
-        <Col >
-        <Sidebar />
+          <Topbar />
+          <Navbar />
+          <Col >
+            <Sidebar />
             {/* <h5 className="mb-4">ERP Menu</h5>
             <Nav className="flex-column">
               <Nav.Link as={NavLink} to="/" end className="text-white">Home</Nav.Link>
@@ -43,8 +50,7 @@ function AppERP() {
             <Routes>
               <Route path="/" element={<ERPHome />} />
               <Route path="/Reports" element={<ReportsPayRoll />} />
-              <Route path="/about" element={<About />} />              
-              <Route path="/Employees" element={<Employees />} />
+              <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/HR" element={<HR />} />
@@ -52,7 +58,13 @@ function AppERP() {
               <Route path="/Administration" element={<Administration />} />
               <Route path="/Login" element={<Login />} />
               <Route path="/Settings" element={<Settings />} />
-             
+              <Route path="/Home" element={<Home />} />
+              <Route path="/Employees" element={<Employees />} />
+              <Route path="/GeneratePayroll" element={<GeneratePayroll />} />
+              <Route path="/LeaveManagement" element={<LeaveManagement />} />
+              <Route path="/PayrollSetup" element={<PayrollSetup />} />
+              <Route path="/TaxSetup" element={<TaxSetup />} />
+
             </Routes>
           </Col>
         </Row>
