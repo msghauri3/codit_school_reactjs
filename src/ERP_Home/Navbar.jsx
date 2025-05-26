@@ -6,14 +6,16 @@ function NavbarHome() {
   return (
     <Navbar className="custom-navbar" expand="lg" bg="light" variant="light">
       {/* Brand or ERP bold text */}
-      <Navbar.Brand href="/" className="ms-3 fw-bold">ERP - Home</Navbar.Brand>
+      <Navbar.Brand href="/" className="ms-3 fw-bold">ERP Home</Navbar.Brand>
 
       {/* Nav links */}
       <Nav className="me-auto">
-        <Nav.Link href="HR">Payroll</Nav.Link>
-        <Nav.Link href="Reports">Payroll Setup</Nav.Link>
-        <Nav.Link href="Analytics">Analytics</Nav.Link>
-        <Nav.Link href="Administration">Administration</Nav.Link>
+        <Nav.Link href="HRM">ERP</Nav.Link>
+        <Nav.Link href="Reports">Finance & Accounting</Nav.Link>
+        <Nav.Link href="Analytics">Procurement</Nav.Link>
+        <Nav.Link href="Administration">Inventory</Nav.Link>
+        <Nav.Link href="Administration">Supply Chain</Nav.Link>
+        <Nav.Link href="Administration">  CRM</Nav.Link>
       </Nav>
 
       {/* Right aligned Nav for Login and Settings */}
