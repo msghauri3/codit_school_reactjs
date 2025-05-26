@@ -10,7 +10,7 @@ function NavbarHome() {
 
       {/* Nav links */}
       <Nav className="me-auto">
-        <Nav.Link href="HRM">ERP</Nav.Link>
+        <Nav.Link href="HRM">Human Resources</Nav.Link>
         <Nav.Link href="Reports">Finance & Accounting</Nav.Link>
         <Nav.Link href="Analytics">Procurement</Nav.Link>
         <Nav.Link href="Administration">Inventory</Nav.Link>
