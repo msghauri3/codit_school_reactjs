@@ -9,7 +9,12 @@ import Topbar from './Home_Interface/TopBar'
 import Navbar from './Home_Interface/Navbar'
 import Sidebar from './Home_Interface/Sidebar'
 import ReportsPayRoll from './Pay_Roll/Reports'
-import hr from './Pay_Roll/hr';
+import HR from './Pay_Roll/HR';
+import Analytics from './Pay_Roll/Analytics';
+import Administration from './Pay_Roll/Administration';
+import Login from './Pay_Roll/Login';
+import Settings from './Pay_Roll/Settings'
+
 
 
 function AppERP() {
@@ -38,7 +43,12 @@ function AppERP() {
               <Route path="/about" element={<About />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
-             <Route path="/hr" element={<hr />} />
+              <Route path="/HR" element={<HR />} />
+              <Route path="/Analytics" element={<Analytics />} />
+              <Route path="/Administration" element={<Administration />} />
+              <Route path="/Login" element={<Login />} />
+              <Route path="/Settings" element={<Settings />} />
+             
             </Routes>
           </Col>
         </Row>

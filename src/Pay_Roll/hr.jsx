@@ -1,9 +1,9 @@
 import React from 'react'
 
-function hr() {
+function HR() {
   return (
-    <div>hr</div>
+    <div>HR</div>
   )
 }
 
-export default hr
+export default HR
