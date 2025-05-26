@@ -1,19 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
-import HomeInterface from './Home_Interface/Home';
-import About from './Pay_Roll/About';
-import Services from './Pay_Roll/Services';
-import Contact from './Pay_Roll/Contact';
+import HomeInterface from './ERP/Home';
+import About from './HRM/About';
+import Services from './HRM/Services';
+import Contact from './HRM/Contact';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
-import Topbar from './Home_Interface/TopBar'
-import Navbar from './Home_Interface/Navbar'
-import Sidebar from './Home_Interface/Sidebar'
-import ReportsPayRoll from './Pay_Roll/Reports'
-import HR from './Pay_Roll/HR';
-import Analytics from './Pay_Roll/Analytics';
-import Administration from './Pay_Roll/Administration';
-import Login from './Pay_Roll/Login';
-import Settings from './Pay_Roll/Settings'
+import Topbar from './ERP/TopBar'
+import Navbar from './ERP/Navbar'
+import Sidebar from './ERP/Sidebar'
+import ReportsPayRoll from './HRM/Reports'
+import HR from './HRM/HR';
+import Analytics from './HRM/Analytics';
+import Administration from './HRM/Administration';
+import Login from './HRM/Login';
+import Settings from './HRM/Settings'
+import Employees from './HRM/Employees';
 
 
 
@@ -40,7 +41,8 @@ function AppERP() {
             <Routes>
               <Route path="/" element={<HomeInterface />} />
               <Route path="/Reports" element={<ReportsPayRoll />} />
-              <Route path="/about" element={<About />} />
+              <Route path="/about" element={<About />} />              
+              <Route path="/Employees" element={<Employees />} />
               <Route path="/services" element={<Services />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/HR" element={<HR />} />
