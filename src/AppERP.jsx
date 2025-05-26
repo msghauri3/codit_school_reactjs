@@ -1,12 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, NavLink } from 'react-router-dom';
 import HomeInterface from './ERP/Home';
+import Topbar from './ERP_Home/TopBar'
+import Navbar from './ERP_Home/Navbar'
+import ERPHome from './ERP_Home/Home'
+
 import About from './HRM/About';
 import Services from './HRM/Services';
 import Contact from './HRM/Contact';
 import { Container, Row, Col, Nav } from 'react-bootstrap';
-import Topbar from './ERP/TopBar'
-import Navbar from './ERP/Navbar'
 import Sidebar from './ERP/Sidebar'
 import ReportsPayRoll from './HRM/Reports'
 import HR from './HRM/HR';
@@ -39,7 +41,7 @@ function AppERP() {
           {/* Right-side content */}
           <Col md={9} className="p-4">
             <Routes>
-              <Route path="/" element={<HomeInterface />} />
+              <Route path="/" element={<ERPHome />} />
               <Route path="/Reports" element={<ReportsPayRoll />} />
               <Route path="/about" element={<About />} />              
               <Route path="/Employees" element={<Employees />} />

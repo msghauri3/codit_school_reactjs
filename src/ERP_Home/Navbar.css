@@ -1,0 +1,22 @@
+.custom-navbar {
+  height: 70px;               /* Set your desired height */
+  background-color: #ffffff;  /* Custom background color */
+  padding-left: 1rem;         /* Optional: control horizontal padding */
+  padding-right: 1rem;
+  width: 100%;
+  margin: 0;
+  box-sizing: border-box;
+  border-bottom: 2px solid #03172c;     /* add border: thickness, style, color */
+
+}
+
+/* Optional: adjust brand and links vertically */
+.custom-navbar .navbar-brand,
+.custom-navbar .nav-link {
+  line-height: 70px;          /* Vertically center text based on navbar height */
+}
+
+.custom-navbar .nav-link {
+  padding: 0.5rem 1rem;
+  font-weight: 500;
+}

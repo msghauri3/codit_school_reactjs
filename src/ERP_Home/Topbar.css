@@ -1,0 +1,10 @@
+.topbar {
+  width: 100%;
+  height: 30px;               /* Set your desired height */
+  max-width: 100%;
+  background-color: #03172c;  /* Custom background */
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  align-items: center;        /* Vertically center content */
+}
