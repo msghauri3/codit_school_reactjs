@@ -8,3 +8,10 @@
   display: flex;
   align-items: center;        /* Vertically center content */
 }
+
+.topbar-inner {
+  padding: 0 1rem;
+}
+.topbar-brand {
+  font-size: 14px; /* Or any size you prefer */
+}

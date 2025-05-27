@@ -3,19 +3,20 @@ import './Topbar.css';
 
 function Topbar() {
   return (
-    <Navbar
-      expand="lg"
-      variant="dark"
-      className="topbar"
-      style={{ position: 'sticky', top: 0, zIndex: 1030 }}
-    >
-      <Navbar.Brand href="/" className="text-white">ERP Dashboard</Navbar.Brand>
-      <Navbar.Collapse className="justify-content-end">
-        <Navbar.Text className="text-white">
-          Signed in as: <a href="#login" className="text-info">Mark Otto</a>
-        </Navbar.Text>
-      </Navbar.Collapse>
-    </Navbar>
+<Navbar
+  expand="lg"
+  variant="dark"
+  className="topbar"
+  style={{ position: 'sticky', top: 0, zIndex: 1030 }}
+>
+  <div className="topbar-inner w-100 d-flex justify-content-between align-items-center">
+    <Navbar.Brand href="/" className="text-info">ERP Dashboard</Navbar.Brand>
+    <Navbar.Text className="text-white">
+      Signed in as: <span className="text-info">ERP Department</span>
+    </Navbar.Text>
+  </div>
+</Navbar>
+
   );
 }
 
