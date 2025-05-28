@@ -17,9 +17,10 @@ import ProcurmentLayout from './CRM_Home/Layout'
 import HomeERP from './ERP_Home/Home';
 import HomeHRM from './HRM_Home/Home';
 import Employees from './HRM_Home/Employees';
-import Payroll from './HRM_Home/GeneratePayroll';
+import Payroll from './HRM_Home/Payroll';
 import Leaves from './HRM_Home/Leaves'
-
+import TaxSetup from './HRM_Home/TaxSetup'
+import Reports from './HRM_Home/Reports'
 
 
 
@@ -36,8 +37,12 @@ function AppRoutes() {
       <Route path="/HRM" element={<HRMLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="Employees" element={<Employees />} />
+        <Route path="GeneratePayroll" element={<Payroll />} />
+        <Route path="Leaves" element={<Leaves />} />
+        <Route path="TaxSetup" element={<TaxSetup />} />
+        <Route path="Leaves" element={<Leaves />} />
         <Route path="Payroll" element={<Payroll />} />
-         <Route path="Leaves" element={<Leaves />} />
+        <Route path="Reports" element={<Reports />} />
       </Route>
 
  

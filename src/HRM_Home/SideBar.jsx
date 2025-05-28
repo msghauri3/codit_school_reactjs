@@ -18,19 +18,13 @@ function SideBarHRM() {
           <FaUsers className="me-2" /> Employee Detail
         </Nav.Link>
         <Nav.Link as={NavLink} to="./GeneratePayroll" className="text-white">
-          <FaChartLine className="me-2" /> Performance
+          <FaChartLine className="me-2" /> Generate Payroll
         </Nav.Link>
-        <Nav.Link as={NavLink} to="/TaxSetup" className="text-white">
-          <FaUserGraduate className="me-2" /> Training
+        <Nav.Link as={NavLink} to="./TaxSetup" className="text-white">
+          <FaUserGraduate className="me-2" /> Tax Setup
         </Nav.Link>
-        <Nav.Link as={NavLink} to="/LeaveManagement" className="text-white">
-          <FaClipboardCheck className="me-2" /> Compliance
-        </Nav.Link>
-        <Nav.Link as={NavLink} to="/Reports" className="text-white">
-          <FaSignOutAlt className="me-2" /> Separation
-        </Nav.Link>
-        <Nav.Link as={NavLink} to="/PayrollSetup" className="text-white">
-          <FaChartPie className="me-2" /> Reports-Analysis
+        <Nav.Link as={NavLink} to="./Reports" className="text-white">
+          <FaSignOutAlt className="me-2" /> Reports
         </Nav.Link>
       </Nav>
     </div>

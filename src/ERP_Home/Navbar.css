@@ -20,3 +20,21 @@
   padding: 0.5rem 1rem;
   font-weight: 500;
 }
+
+
+.custom-navbar .nav-link {
+  position: relative;
+  padding: 0 1rem;
+  font-weight: 500;
+}
+
+/* Vertical line using ::after pseudo-element */
+.custom-navbar .nav-link:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  right: 0;
+  height: 50%;  /* Adjust to match text height */
+  width: 1px;
+  background-color: #ccc; /* Divider color */
+}
