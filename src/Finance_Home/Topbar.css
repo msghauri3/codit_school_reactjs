@@ -3,7 +3,6 @@
   height: 30px;               /* Set your desired height */
   max-width: 100%;
   background-color: #03172c;  /* Custom background */
-  background-color: #414c60;  /* Custom background */
   margin: 0 auto;
   padding: 0 1rem;
   display: flex;
@@ -16,11 +15,3 @@
 .topbar-brand {
   font-size: 14px; /* Or any size you prefer */
 }
-
-.topbar .navbar-text {
-  color: #ffc03d !important;
-}
-
-/* .topbar .navbar-brand {
-  color: #ffc03d !important;
-} */

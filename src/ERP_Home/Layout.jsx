@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import TopBarERP from './TopBar';
 import NavBarERP from './NavBar';
 import SideBarERP from './SideBar';
+import TopTopBarERP from './TopTopBar'
 
 export default function ERPLayout() {
   return (
