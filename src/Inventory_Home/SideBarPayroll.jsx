@@ -8,7 +8,7 @@ function SideBarHRM() {
       className="sidebar text-white p-3"
       style={{ width: '250px', minHeight: '100vh', backgroundColor: '#142141' }}
     >
-      <h5 className="mb-4">Payroll</h5>
+      <h5 className="mb-4">Inventory</h5>
       <Nav className="flex-column">
         <Nav.Link as={NavLink} to="./" end className="text-white">Employees Detail</Nav.Link>
         <Nav.Link as={NavLink} to="./Employees" className="text-white">Salaries Strcture</Nav.Link>

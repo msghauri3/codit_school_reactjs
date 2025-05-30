@@ -3,7 +3,7 @@ import { Outlet } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
 import TopBarHRM from './TopBar';
 import NavBarHRM from './NavBar';
-import SideBarHRM from './SideBar';
+import SideBarGL from './SideBarGL';
 import SideBarPayroll from './SideBarPayroll';
 import SideBarLeaves from './SideBarLeaves'
 
@@ -14,12 +14,12 @@ export default function HRMLayout() {
 
   let SidebarComponent;
 
-  if (path.startsWith('/HRM/Leaves')) {
+  if (path.startsWith('/Finance/SideBarGL')) {
     SidebarComponent = <SideBarLeaves />;
   } else if (path.startsWith('/HRM/Payroll')) {
     SidebarComponent = <SideBarPayroll />;
   } else {
-    SidebarComponent = <SideBarHRM />;
+    SidebarComponent = <SideBarGL />;
   }
 
   return (

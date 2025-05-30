@@ -6,7 +6,7 @@ function NavbarHome() {
   return (
     <Navbar className="custom-navbar" expand="lg" bg="light" variant="light">
       {/* Brand or ERP bold text */}
-      <Navbar.Brand href="/HRM" className="ms-3 fw-bold">Human Resoucres</Navbar.Brand>
+      <Navbar.Brand href="/HRM" className="ms-3 fw-bold">Inventory Management</Navbar.Brand>
 
       {/* Nav links */}
       <Nav className="me-auto">
