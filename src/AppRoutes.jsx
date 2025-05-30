@@ -8,9 +8,9 @@ import RNDLayout from './HRM_Home/Layout';
 import FinanceLayout from './Finance_Home/Layout'
 import CRMLayout from './CRM_Home/Layout'
 
-import InventoryLayout from './CRM_Home/Layout'
-import SupplyChainLayout from './CRM_Home/Layout'
-import ProcurmentLayout from './CRM_Home/Layout'
+import InventoryLayout from './Inventory_Home/Layout'
+import SupplyChainLayout from './SupplyChain_Home/Layout'
+import ProcurmentLayout from './Procurment_Home/Layout'
 
 
 // Pages
@@ -21,8 +21,9 @@ import Payroll from './HRM_Home/Payroll';
 import Leaves from './HRM_Home/Leaves'
 import TaxSetup from './HRM_Home/TaxSetup'
 import Reports from './HRM_Home/Reports'
+import ChartOfAccount from './Finance_Home/ChartOfAccount'
 
-
+import GeneralLedger from './Finance_Home/GeneralLedger';
 
 import Axios1 from  './RND/Axios1'
 
@@ -48,8 +49,8 @@ function AppRoutes() {
  
       <Route path="/Finance" element={<FinanceLayout />}>
         <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
-        <Route path="Payroll" element={<Payroll />} />
+        <Route path="GeneralLedger" element={<GeneralLedger />} />
+        <Route path="ChartOfAccount" element={<ChartOfAccount />} />
          <Route path="Leaves" element={<Leaves />} />
       </Route>
 

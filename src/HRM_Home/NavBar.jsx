@@ -13,7 +13,6 @@ function NavbarHome() {
         <Nav.Link href="/HRM/Employees">Employees</Nav.Link>
         <Nav.Link href="/HRM/Payroll">Payroll</Nav.Link>
         <Nav.Link href="/HRM/Leaves">Leaves </Nav.Link>
-        <Nav.Link href="/">Back To ERP</Nav.Link>
       </Nav>
 
       {/* Right aligned Nav for Login and Settings */}

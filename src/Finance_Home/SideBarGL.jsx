@@ -14,23 +14,23 @@ function SideBarHRM() {
         <Nav.Link as={NavLink} to="./" end className="text-white">
           <FaHome className="me-2" /> Home
         </Nav.Link>
-        <Nav.Link as={NavLink} to="./Employees" className="text-white">
-          <FaUsers className="me-2" /> Employee Detail
+        <Nav.Link as={NavLink} to="./ChartOfAccount" className="text-white">
+          <FaUsers className="me-2" /> Chart of Accounts
         </Nav.Link>
         <Nav.Link as={NavLink} to="./GeneratePayroll" className="text-white">
-          <FaChartLine className="me-2" /> Performance
+          <FaChartLine className="me-2" /> Journal Entries
         </Nav.Link>
         <Nav.Link as={NavLink} to="/TaxSetup" className="text-white">
-          <FaUserGraduate className="me-2" /> Training
+          <FaUserGraduate className="me-2" /> Posting Periods
         </Nav.Link>
         <Nav.Link as={NavLink} to="/LeaveManagement" className="text-white">
-          <FaClipboardCheck className="me-2" /> Compliance
+          <FaClipboardCheck className="me-2" /> Trial Balance
         </Nav.Link>
         <Nav.Link as={NavLink} to="/Reports" className="text-white">
-          <FaSignOutAlt className="me-2" /> Separation
+          <FaSignOutAlt className="me-2" /> Financial Statements
         </Nav.Link>
         <Nav.Link as={NavLink} to="/PayrollSetup" className="text-white">
-          <FaChartPie className="me-2" /> Reports-Analysis
+          <FaChartPie className="me-2" /> Audit Trail / Logs
         </Nav.Link>
       </Nav>
     </div>
