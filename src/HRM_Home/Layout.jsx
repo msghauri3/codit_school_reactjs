@@ -28,9 +28,7 @@ export default function HRMLayout() {
       <NavBarHRM />
       <div className="d-flex" style={{ minHeight: '100vh' }}>
         {/* <SideBarHRM /> */}
-               {SidebarComponent}
-
-
+        {SidebarComponent}
 
         <div className="flex-grow-1 p-4" style={{ backgroundColor: '#f0f0f0' }}>
           <Outlet />

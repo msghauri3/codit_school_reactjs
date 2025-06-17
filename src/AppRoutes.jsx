@@ -13,10 +13,12 @@ import SupplyChainLayout from './SupplyChain_Home/Layout'
 import ProcurmentLayout from './Procurment_Home/Layout'
 
 
+
 // Pages
 import HomeERP from './ERP_Home/Home';
 import HomeHRM from './HRM_Home/Home';
-import Employees from './HRM_Home/Employees';
+import DashboardHRM from './HRM_Home/DashboardHRM';
+import EmployeesDetail from './HRM_Home/EmployeesDetail'
 import Payroll from './HRM_Home/Payroll';
 import Leaves from './HRM_Home/Leaves'
 import TaxSetup from './HRM_Home/TaxSetup'
@@ -32,12 +34,13 @@ function AppRoutes() {
   return (
     <Routes>
       <Route path="/" element={<ERPLayout />}>
-        <Route index element={<HomeERP />} />
+       
       </Route>
 
       <Route path="/HRM" element={<HRMLayout />}>
         <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
+        <Route path="DashboardHRM" element={<DashboardHRM />} />
+        <Route path="EmployeesDetail" element={<EmployeesDetail />} />        
         <Route path="GeneratePayroll" element={<Payroll />} />
         <Route path="Leaves" element={<Leaves />} />
         <Route path="TaxSetup" element={<TaxSetup />} />
@@ -56,7 +59,7 @@ function AppRoutes() {
 
       <Route path="/CRM" element={<CRMLayout />}>
         <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
+        <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="Payroll" element={<Payroll />} />
          <Route path="Leaves" element={<Leaves />} />
       </Route>
@@ -65,7 +68,7 @@ function AppRoutes() {
 
  <Route path="/Inventory" element={<InventoryLayout />}>
         <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
+        <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="Payroll" element={<Payroll />} />
          <Route path="Leaves" element={<Leaves />} />
       </Route>
@@ -73,7 +76,7 @@ function AppRoutes() {
 
  <Route path="/SupplyChain" element={<SupplyChainLayout />}>
         <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
+        <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="Payroll" element={<Payroll />} />
          <Route path="Leaves" element={<Leaves />} />
       </Route>
@@ -81,7 +84,7 @@ function AppRoutes() {
 
       <Route path="/Procurement" element={<ProcurmentLayout />}>
         <Route index element={<HomeHRM />} />
-        <Route path="Employees" element={<Employees />} />
+        <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="Payroll" element={<Payroll />} />
          <Route path="Leaves" element={<Leaves />} />
       </Route>

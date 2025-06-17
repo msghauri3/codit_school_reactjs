@@ -4,7 +4,7 @@ import Sidebar from './SideBar'
 function Home() {
   return (
     <div>
-Home
+       <h1>Welcome to HRM Sections</h1> 
     </div>
   )
 }

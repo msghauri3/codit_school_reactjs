@@ -12,10 +12,10 @@ function NavbarHome() {
       <Nav className="me-auto">
         <Nav.Link href="HRM">Human Resources</Nav.Link>
         <Nav.Link href="Finance">Finance & Accounting</Nav.Link>
-        <Nav.Link href="CRM">  CRM</Nav.Link>
+        {/* <Nav.Link href="CRM">  CRM</Nav.Link>
         <Nav.Link href="Procurement">Procurement</Nav.Link>
         <Nav.Link href="Inventory">Inventory</Nav.Link>
-        <Nav.Link href="SupplyChain">Supply Chain</Nav.Link>
+        <Nav.Link href="SupplyChain">Supply Chain</Nav.Link> */}
     
       </Nav>
 

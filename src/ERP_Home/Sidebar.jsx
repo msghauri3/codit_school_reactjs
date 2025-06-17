@@ -2,48 +2,63 @@ import { Row, Col, Nav } from 'react-bootstrap';
 import { NavLink, Outlet } from 'react-router-dom';
 import {
   FaHome,
-  FaUsers,
-  FaMoneyCheckAlt,
-  FaPercentage,
-  FaCalendarCheck,
-  FaChartBar,
-  FaCogs,
-} from 'react-icons/fa';
+  FaChartPie,
+  FaUserShield,
+  FaPuzzlePiece,
+  FaDownload,
+  FaLightbulb,
+  FaEnvelopeOpenText,
+} from 'react-icons/fa'; // Replaced some icons to better match names
 import './Sidebar.css';
 
 function SidebarLayout({ children }) {
   return (
     <div className="container-fluid px-0 mx-0">
       <Row className="d-flex flex-nowrap">
-        {/* Sidebar with fixed width and full height */}
-        <div className="sidebar text-white p-3" style={{ width: '250px', minHeight: '100vh', backgroundColor: '#142141' }}>
-          <h5 className="mb-4">ERP</h5>
+        {/* Sidebar */}
+        <div
+          className="sidebar text-white p-3"
+          style={{
+            width: '250px',
+            minHeight: '100vh',
+            backgroundColor: '#142141',
+          }}
+        >
+          <h5 className="mb-4">ERP Main</h5>
           <Nav className="flex-column">
+
             <Nav.Link as={NavLink} to="/Home" end className="text-white">
-              <FaHome className="me-2" /> Home
+              <FaHome className="me-2" style={{ color: '#00d1b2' }} /> Setup
             </Nav.Link>
+
             <Nav.Link as={NavLink} to="/Employees" className="text-white">
-              <FaUsers className="me-2" /> Employee Detail
+              <FaChartPie className="me-2" style={{ color: '#ff3860' }} /> Reports
             </Nav.Link>
+
             <Nav.Link as={NavLink} to="/GeneratePayroll" className="text-white">
-              <FaMoneyCheckAlt className="me-2" /> Payroll
+              <FaUserShield className="me-2" style={{ color: '#3273dc' }} /> Users
             </Nav.Link>
+
             <Nav.Link as={NavLink} to="/TaxSetup" className="text-white">
-              <FaPercentage className="me-2" /> Tax Setup
+              <FaPuzzlePiece className="me-2" style={{ color: '#ffdd57' }} /> Modules
             </Nav.Link>
+
             <Nav.Link as={NavLink} to="/LeaveManagement" className="text-white">
-              <FaCalendarCheck className="me-2" /> Leave Management
+              <FaDownload className="me-2" style={{ color: '#23d160' }} /> Downloads
             </Nav.Link>
+
             <Nav.Link as={NavLink} to="/Reports" className="text-white">
-              <FaChartBar className="me-2" /> Reports
+              <FaLightbulb className="me-2" style={{ color: '#ff851b' }} /> Suggestions
             </Nav.Link>
+
             <Nav.Link as={NavLink} to="/PayrollSetup" className="text-white">
-              <FaCogs className="me-2" /> Payroll Setup
+              <FaEnvelopeOpenText className="me-2" style={{ color: '#b86bff' }} /> Mails
             </Nav.Link>
+
           </Nav>
         </div>
 
-        {/* Main content with full height */}
+        {/* Main content */}
         <Col className="p-4 flex-grow-1" style={{ height: '100vh', overflowY: 'auto' }}>
           {children || <Outlet />}
         </Col>

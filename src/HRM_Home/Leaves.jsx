@@ -2,7 +2,9 @@ import React from 'react'
 
 function Leaves() {
   return (
-    <div>Leaves</div>
+    <div>
+      <h1>Leaves Section</h1>
+      </div>
   )
 }
 
