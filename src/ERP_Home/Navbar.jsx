@@ -1,8 +1,15 @@
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import './Navbar.css';   // Import the stylesheet
+import { Link, useNavigate } from 'react-router-dom';
 
 function NavbarHome() {
+   const navigate = useNavigate();
+  const handleLogout = () => {
+    localStorage.removeItem('token');
+    navigate('/Login');
+  };
+
   return (
     <Navbar className="custom-navbar" expand="lg" bg="light" variant="light">
       {/* Brand or ERP bold text */}
@@ -21,8 +28,11 @@ function NavbarHome() {
 
       {/* Right aligned Nav for Login and Settings */}
       <Nav className="ms-auto">
-        <Nav.Link href="Login">Login</Nav.Link>
+        {/* <Nav.Link href="Login">Login</Nav.Link> */}
         <Nav.Link href="Settings">Settings</Nav.Link>
+        <Nav.Link onClick={handleLogout} style={{ cursor: 'pointer' }}>
+        Logout
+      </Nav.Link>
       </Nav>
     </Navbar>
   );

@@ -13,7 +13,6 @@ import SupplyChainLayout from './SupplyChain_Home/Layout'
 import ProcurmentLayout from './Procurment_Home/Layout'
 
 
-
 // Pages
 import HomeERP from './ERP_Home/Home';
 import HomeHRM from './HRM_Home/Home';
@@ -24,8 +23,12 @@ import Leaves from './HRM_Home/Leaves'
 import TaxSetup from './HRM_Home/TaxSetup'
 import Reports from './HRM_Home/Reports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
-
 import GeneralLedger from './Finance_Home/GeneralLedger';
+
+
+// Login
+import Login from './Login/Login'
+import PrivateRoute from './Components/PrivateRouts'
 
 import Axios1 from  './RND/Axios1'
 
@@ -33,11 +36,25 @@ import Axios1 from  './RND/Axios1'
 function AppRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<ERPLayout />}>
+      <Route path="/" element={
+    
+         <PrivateRoute>
+              <ERPLayout />
+             </PrivateRoute>
+        }>
        
       </Route>
 
-      <Route path="/HRM" element={<HRMLayout />}>
+     <Route path="/Login" element={<Login />}>
+               
+     </Route>
+
+      <Route path="/HRM" element={        
+             <PrivateRoute>
+             <HRMLayout />
+             </PrivateRoute>
+      }>
+
         <Route index element={<HomeHRM />} />
         <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="EmployeesDetail" element={<EmployeesDetail />} />        
@@ -50,7 +67,11 @@ function AppRoutes() {
       </Route>
 
  
-      <Route path="/Finance" element={<FinanceLayout />}>
+      <Route path="/Finance" element={
+         <PrivateRoute>
+             <FinanceLayout />
+             </PrivateRoute>        
+        }>
         <Route index element={<HomeHRM />} />
         <Route path="GeneralLedger" element={<GeneralLedger />} />
         <Route path="ChartOfAccount" element={<ChartOfAccount />} />
