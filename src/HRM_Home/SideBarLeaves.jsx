@@ -8,6 +8,7 @@ import {
   FaHeart,
   FaBaby,
   FaCogs,
+  FaChartPie,
 } from 'react-icons/fa';
 import './Sidebar.css';
 
@@ -44,8 +45,12 @@ function SideBarHRM() {
           <FaBaby className="me-2" style={{ color: '#ffdd57' }} /> Maternity Leaves
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="./PayrollSetup" className="text-white">
-          <FaCogs className="me-2" style={{ color: '#b86bff' }} /> Payroll Setup
+        <Nav.Link as={NavLink} to="./LeavesSetup" className="text-white">
+          <FaCogs className="me-2" style={{ color: '#b86bff' }} /> Leaves Setup
+        </Nav.Link>
+
+        <Nav.Link as={NavLink} to="./LeavesReports" className="text-white">
+          <FaChartPie className="me-2" style={{ color: '#ff69b4' }} /> Reports
         </Nav.Link>
 
       </Nav>

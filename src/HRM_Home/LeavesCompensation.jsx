@@ -2,7 +2,7 @@ import React from 'react'
 
 function LeavesCompensation() {
   return (
-    <div>Leaves Compensation</div>
+    <div><h1>Leaves Compensation</h1></div>
   )
 }
 
