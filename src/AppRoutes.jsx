@@ -25,6 +25,11 @@ import EmployeesSelection from './HRM_Home/EmployeesSelection'
 import Leaves from './HRM_Home/Leaves'
 import DashboardLeaves from './HRM_Home/DashboardLeaves'
 import LeavesCasual from './HRM_Home/LeavesCasual'
+import LeavesCompensation from './HRM_Home/LeavesCompensation';
+import LeavesEarned from './HRM_Home/LeavesEarned';
+import LeavesMaternity from './HRM_Home/LeavesMaternity';
+import LeavesSick from './HRM_Home/LeavesSick';
+import PayrollSetup from './HRM_Home/PayrollSetup';
 import TaxSetup from './HRM_Home/TaxSetup'
 import EmployeesReports from './HRM_Home/EmployeesReports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
@@ -79,6 +84,11 @@ function AppRoutes() {
         <Route path="TaxSetup" element={<TaxSetup />} />
         <Route path="Leaves" element={<Leaves />} />
          <Route path="LeavesCasual" element={<LeavesCasual />} />
+         <Route path="LeavesCompensation" element={<LeavesCompensation />} />
+         <Route path="LeavesEarned" element={<LeavesEarned />} />
+         <Route path="LeavesMaternity" element={<LeavesMaternity />} />
+         <Route path="LeavesSick" element={<LeavesSick />} />
+         <Route path="PayrollSetup" element={<PayrollSetup />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="EmployeesReports" element={<EmployeesReports />} />
         <Route path="UploadExcel" element={<UploadExcel />} />

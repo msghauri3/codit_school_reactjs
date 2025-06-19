@@ -28,23 +28,23 @@ function SideBarHRM() {
           <FaUmbrellaBeach className="me-2" style={{ color: '#3273dc' }} /> Casual Leaves
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="./GeneratePayroll" className="text-white">
+        <Nav.Link as={NavLink} to="./LeavesSick" className="text-white">
           <FaBed className="me-2" style={{ color: '#ff3860' }} /> Sick Leaves
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="/TaxSetup" className="text-white">
+        <Nav.Link as={NavLink} to="./LeavesEarned" className="text-white">
           <FaBriefcaseMedical className="me-2" style={{ color: '#23d160' }} /> Earned Leaves
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="/LeaveManagement" className="text-white">
+        <Nav.Link as={NavLink} to="./LeavesCompensation" className="text-white">
           <FaHeart className="me-2" style={{ color: '#ff69b4' }} /> Compensation Leaves
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="/Reports" className="text-white">
+        <Nav.Link as={NavLink} to="./LeavesMaternity" className="text-white">
           <FaBaby className="me-2" style={{ color: '#ffdd57' }} /> Maternity Leaves
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="/PayrollSetup" className="text-white">
+        <Nav.Link as={NavLink} to="./PayrollSetup" className="text-white">
           <FaCogs className="me-2" style={{ color: '#b86bff' }} /> Payroll Setup
         </Nav.Link>
 
