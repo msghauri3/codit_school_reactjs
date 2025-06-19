@@ -2,7 +2,7 @@ import React from 'react'
 
 function LeavesEarned() {
   return (
-    <div>Leaves Earned</div>
+    <div><h1>Leaves Earned</h1></div>
   )
 }
 

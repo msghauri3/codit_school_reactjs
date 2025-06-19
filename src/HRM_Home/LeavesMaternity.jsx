@@ -2,7 +2,7 @@ import React from 'react'
 
 function LeavesMaternity() {
   return (
-    <div>Leaves Maternity</div>
+    <div><h1>Leaves Maternity</h1></div>
   )
 } 
 

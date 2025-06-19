@@ -29,7 +29,8 @@ import LeavesCompensation from './HRM_Home/LeavesCompensation';
 import LeavesEarned from './HRM_Home/LeavesEarned';
 import LeavesMaternity from './HRM_Home/LeavesMaternity';
 import LeavesSick from './HRM_Home/LeavesSick';
-import PayrollSetup from './HRM_Home/PayrollSetup';
+import LeavesSetup from './HRM_Home/LeavesSetup';
+import LeavesReports from './HRM_Home/LeavesReports';
 import TaxSetup from './HRM_Home/TaxSetup'
 import EmployeesReports from './HRM_Home/EmployeesReports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
@@ -88,7 +89,8 @@ function AppRoutes() {
          <Route path="LeavesEarned" element={<LeavesEarned />} />
          <Route path="LeavesMaternity" element={<LeavesMaternity />} />
          <Route path="LeavesSick" element={<LeavesSick />} />
-         <Route path="PayrollSetup" element={<PayrollSetup />} />
+         <Route path="LeavesSetup" element={<LeavesSetup />} />
+         <Route path="LeavesReports" element={<LeavesReports />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="EmployeesReports" element={<EmployeesReports />} />
         <Route path="UploadExcel" element={<UploadExcel />} />

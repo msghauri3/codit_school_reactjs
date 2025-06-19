@@ -2,7 +2,7 @@ import React from 'react'
 
 function LeavesSick() {
   return (
-    <div>Leaves Sick</div>
+    <div><h1>Leaves Sick</h1></div>
   )
 }
 
