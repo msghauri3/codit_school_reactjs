@@ -48,8 +48,65 @@ const handleLoginBT = async (e) => {
         }};
 
 
+      //   const handleLoginBT1 = async (e) => {
+      //   e.preventDefault();
+      //   setMessage('Logging In ...')
+      // try {
+      //   const response = await axios.post('http://127.0.0.1:8000/login',{
+      //   username : username.trim(),
+      //   password : password.trim(),
+      //    });
+      //    console.log("Login Success", response.data);
+      //    localStorage.setItem('token', response.token)
+      //    setMessage("Login Successful");
+      //    navigate('/HRM/DashboardHRM');
+      // } catch (error)
+      //   {
+      //     console.error('Login Error:', error.response?.data || error.message);
+      //     setMessage('❌ Login failed. Check username and password.');
+      //   }};
 
 
+        
+const handleLoginFastAPI = async (e) => {
+  e.preventDefault();  // 🔴 prevent form from reloading the page
+  try {
+    const response = await fetch("http://127.0.0.1:8000/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({
+        username: username,
+        password: password
+      })
+    });
+
+    const data = await response.json();
+
+    if (!response.ok) {
+      console.error("Login failed:", data.detail || "Unknown error");
+      alert("Login failed: " + (data.detail || "Unknown error"));
+      return;
+    }
+
+    console.log("Login success", data);
+    alert("Login successful!");
+
+  } catch (error) {
+    console.error("Network error:", error);
+    alert("An unexpected error occurred.");
+  }
+};
+
+
+
+
+
+
+
+
+        
   return (
     <div style={{ maxWidth: '400px', margin: '40px auto', padding: '20px', border: '1px solid #ddd', borderRadius: '10px' }}>
       <h2>Login</h2>

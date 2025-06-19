@@ -19,7 +19,7 @@ function ExcelUpload() {
     formData.append("file", file);
 
     try {
-      const res = await axios.post("https://localhost:5001/api/upload", formData, {
+      const res = await axios.post("http://103.175.722.31:83/api/payroll/upload", formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         }

@@ -24,22 +24,14 @@ function SideBarHRM() {
         </Nav.Link>
 
         <Nav.Link as={NavLink} to="./EmployeesDetail" end className="text-white">
-          <FaHome className="me-2" style={{ color: '#ffdd57' }} /> Detail
+          <FaHome className="me-2" style={{ color: '#ffdd57' }} /> All Emp
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="./Employees" className="text-white">
-          <FaUsers className="me-2" style={{ color: '#ff3860' }} /> By Departments
+        <Nav.Link as={NavLink} to="./EmployeesSelection" className="text-white">
+          <FaUsers className="me-2" style={{ color: '#ff3860' }} /> By Selection
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="./GeneratePayroll" className="text-white">
-          <FaChartLine className="me-2" style={{ color: '#3273dc' }} /> By Designations
-        </Nav.Link>
-
-        <Nav.Link as={NavLink} to="./TaxSetup" className="text-white">
-          <FaUserGraduate className="me-2" style={{ color: '#ffdd57' }} /> By Locations
-        </Nav.Link>
-
-        <Nav.Link as={NavLink} to="./Reports" className="text-white">
+        <Nav.Link as={NavLink} to="./EmployeesReports" className="text-white">
           <FaSignOutAlt className="me-2" style={{ color: '#b86bff' }} /> Reports
         </Nav.Link>
 

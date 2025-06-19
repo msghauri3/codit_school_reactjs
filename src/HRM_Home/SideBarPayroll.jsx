@@ -21,8 +21,16 @@ function SideBarHRM() {
       <h5 className="mb-4">Payroll</h5>
       <Nav className="flex-column">
 
-        <Nav.Link as={NavLink} to="./" end className="text-white">
-          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> Employees Detail
+     <Nav.Link as={NavLink} to="./DashboardPayroll" end className="text-white">
+          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> Dashboard
+        </Nav.Link>
+
+        <Nav.Link as={NavLink} to="./PayrollEmp" end className="text-white">
+          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> Payroll Emp
+        </Nav.Link>
+
+        <Nav.Link as={NavLink} to="./PayrollDept" end className="text-white">
+          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> Payroll Dept
         </Nav.Link>
 
         <Nav.Link as={NavLink} to="./Employees" className="text-white">

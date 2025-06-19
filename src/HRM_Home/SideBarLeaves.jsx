@@ -20,11 +20,11 @@ function SideBarHRM() {
       <h5 className="mb-4">Leaves</h5>
       <Nav className="flex-column">
 
-        <Nav.Link as={NavLink} to="./" end className="text-white">
-          <FaHome className="me-2" style={{ color: '#00d1b2' }} /> Home
+        <Nav.Link as={NavLink} to="./DashboardLeaves" end className="text-white">
+          <FaHome className="me-2" style={{ color: '#00d1b2' }} /> Dashboard
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="./Employees" className="text-white">
+        <Nav.Link as={NavLink} to="./LeavesCasual" className="text-white">
           <FaUmbrellaBeach className="me-2" style={{ color: '#3273dc' }} /> Casual Leaves
         </Nav.Link>
 

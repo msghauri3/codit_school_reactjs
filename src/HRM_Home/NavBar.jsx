@@ -22,7 +22,7 @@ function NavbarHome() {
       {/* Nav links */}
       <Nav className="me-auto">
         <Nav.Link href="/HRM/">Employees</Nav.Link>
-        <Nav.Link href="/HRM/Payroll">Payroll</Nav.Link>
+        <Nav.Link href="/HRM/DashboardPayroll">Payroll</Nav.Link>
         <Nav.Link href="/HRM/Leaves">Leaves </Nav.Link>
       </Nav>
 

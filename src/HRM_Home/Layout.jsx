@@ -14,10 +14,10 @@ export default function HRMLayout() {
 
   let SidebarComponent;
 
-  if (path.startsWith('/HRM/Leaves')) {
+  if (path.includes('Leaves')) {
     SidebarComponent = <SideBarLeaves />;
-  } else if (path.startsWith('/HRM/Payroll')) {
-    SidebarComponent = <SideBarPayroll />;
+  } else if (path.includes('Payroll')) {
+  SidebarComponent = <SideBarPayroll />;
   } else {
     SidebarComponent = <SideBarHRM />;
   }

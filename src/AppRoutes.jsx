@@ -13,21 +13,30 @@ import SupplyChainLayout from './SupplyChain_Home/Layout'
 import ProcurmentLayout from './Procurment_Home/Layout'
 
 
-// Pages
+// Employees
 import HomeERP from './ERP_Home/Home';
 import HomeHRM from './HRM_Home/Home';
 import DashboardHRM from './HRM_Home/DashboardHRM';
 import EmployeesDetail from './HRM_Home/EmployeesDetail'
+import EmployeeDetail from './HRM_Home/EmployeeDetail'
+import EmployeesSelection from './HRM_Home/EmployeesSelection'
 
+// Leaves
 import Leaves from './HRM_Home/Leaves'
+import DashboardLeaves from './HRM_Home/DashboardLeaves'
+import LeavesCasual from './HRM_Home/LeavesCasual'
 import TaxSetup from './HRM_Home/TaxSetup'
-import Reports from './HRM_Home/Reports'
+import EmployeesReports from './HRM_Home/EmployeesReports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
 import GeneralLedger from './Finance_Home/GeneralLedger';
 
 // Payroll
 import Payroll from './HRM_Home/Payroll';
 import UploadExcel from './Upload/UploadExcel'
+import PayrollEmp from './HRM_Home/PayrollEmp'
+import PayrollDept from './HRM_Home/PayrollDept'
+import DashboardPayroll from './HRM_Home/DashboardPayroll'
+
 
 
 // Login
@@ -61,14 +70,22 @@ function AppRoutes() {
 
         <Route index element={<HomeHRM />} />
         <Route path="DashboardHRM" element={<DashboardHRM />} />
-        <Route path="EmployeesDetail" element={<EmployeesDetail />} />        
+         <Route path="DashboardPayroll" element={<DashboardPayroll />} />
+        <Route path="EmployeesDetail" element={<EmployeesDetail />} />     
+          <Route path="EmployeesSelection" element={<EmployeesSelection />} />     
         <Route path="GeneratePayroll" element={<Payroll />} />
         <Route path="Leaves" element={<Leaves />} />
+         <Route path="DashboardLeaves" element={<DashboardLeaves />} />
         <Route path="TaxSetup" element={<TaxSetup />} />
         <Route path="Leaves" element={<Leaves />} />
+         <Route path="LeavesCasual" element={<LeavesCasual />} />
         <Route path="Payroll" element={<Payroll />} />
-        <Route path="Reports" element={<Reports />} />
+        <Route path="EmployeesReports" element={<EmployeesReports />} />
         <Route path="UploadExcel" element={<UploadExcel />} />
+        <Route path="EmployeeDetail/:id" element={<EmployeeDetail />} />
+        <Route path="PayrollEmp" element={<PayrollEmp />} />    
+        <Route path="PayrollDept" element={<PayrollDept />} />    
+
       </Route>
 
  
@@ -92,7 +109,7 @@ function AppRoutes() {
 
 
 
- <Route path="/Inventory" element={<InventoryLayout />}>
+     <Route path="/Inventory" element={<InventoryLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="Payroll" element={<Payroll />} />
@@ -100,7 +117,7 @@ function AppRoutes() {
       </Route>
 
 
- <Route path="/SupplyChain" element={<SupplyChainLayout />}>
+    <Route path="/SupplyChain" element={<SupplyChainLayout />}>
         <Route index element={<HomeHRM />} />
         <Route path="DashboardHRM" element={<DashboardHRM />} />
         <Route path="Payroll" element={<Payroll />} />
