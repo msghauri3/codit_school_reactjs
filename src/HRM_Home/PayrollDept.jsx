@@ -8,6 +8,10 @@ const EmployeeGrid = () => {
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
   const [currentPage, setCurrentPage] = useState(1);
+  const [departmentFilter, setDepartmentFilter] = useState('');
+  const [selectedEmployeeIds, setSelectedEmployeeIds] = useState([]);
+
+
   const employeesPerPage = 10;
 
   const navigate = useNavigate();
@@ -31,14 +35,39 @@ const EmployeeGrid = () => {
 
 
   // 🔍 Filter employees by searchTerm
-  const filteredEmployees = employees.filter(emp =>
+const filteredEmployees = employees
+  .filter(emp =>
     emp.employeeName?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     emp.department?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     emp.designation?.toLowerCase().includes(searchTerm.toLowerCase()) ||
     emp.employeeID?.toString().includes(searchTerm) ||
     emp.cnic?.includes(searchTerm)
-  );
+  )
+  .filter(emp => departmentFilter === '' || emp.department === departmentFilter);
 
+
+const handleGeneratePayroll = async () => {
+  try {
+    const response = await axios.post("http://103.175.122.31:83/api/payroll/processsalary", {
+      // employeeIds: selectedEmployeeIds,
+      year: 2025,
+      month: "May",
+      employeeIDs: ["121", "124"] // hardcoded
+    });
+
+    console.log("Payroll Employees:", response.data);
+
+    // Optionally store to display in UI
+    // setPayrollEmployees(response.data);
+  } catch (err) {
+    console.error("Payroll Generation Failed", err);
+  }
+};
+
+
+
+
+  
   // Get current page data
   const indexOfLastEmployee = currentPage * employeesPerPage;
   const indexOfFirstEmployee = indexOfLastEmployee - employeesPerPage;
@@ -56,9 +85,63 @@ const EmployeeGrid = () => {
 
   return (
     <div className="employee-grid-container">
-      <h2>Employee List</h2>
+   {/* <h4>Employee List</h4> */}
 
-      {/* 🔍 Search Input */}
+
+<div className="dropdown-wrapper">
+  <label htmlFor="department-select">Filter by Department:</label>
+  <select
+    id="department-select"
+    value={departmentFilter}
+    onChange={(e) => {
+      setDepartmentFilter(e.target.value);
+      setCurrentPage(1);
+    }}
+  >
+    <option value="">All Departments</option>
+    {Array.from(new Set(employees.map(emp => emp.department))).map(dept => (
+      <option key={dept} value={dept}>{dept}</option>
+    ))}
+  </select>
+</div>
+
+
+<div style={{ marginBottom: '10px' }}>
+  <button
+    className="btn btn-sm btn-outline-primary"
+    onClick={() => {
+      const allIds = currentEmployees.map(emp => emp.employeeID);
+      setSelectedEmployeeIds(allIds);
+    }}
+  >
+    Select All
+  </button>
+
+  <button
+    className="btn btn-sm btn-outline-secondary ms-2"
+    onClick={() => setSelectedEmployeeIds([])}
+  >
+    Clear Selection
+  </button>
+
+
+
+<button
+  className="btn btn-success mt-2"
+  onClick={handleGeneratePayroll}
+  disabled={selectedEmployeeIds.length === 0}
+>
+  Generate Payroll
+</button>
+
+
+
+</div>
+
+
+
+
+      {/* 🔍 Search Input
       <input
         type="text"
         placeholder="Search by name, ID, CNIC, department, designation..."
@@ -68,7 +151,7 @@ const EmployeeGrid = () => {
           setCurrentPage(1); // Reset to first page on new search
         }}
         className="search-input"
-      />
+      /> */}
 
       {loading ? (
         <p>Loading...</p>
@@ -77,6 +160,7 @@ const EmployeeGrid = () => {
           <table className="employee-table">
             <thead>
               <tr>
+                 <th></th> {/* checkbox column */}
                 <th>Name</th>
                 <th>Department</th>
                 <th>Employee No</th>
@@ -85,22 +169,38 @@ const EmployeeGrid = () => {
               </tr>
             </thead>
             <tbody>
-              {currentEmployees.length > 0 ? (
-                currentEmployees.map(emp => (
-                  <tr key={emp.employeeID} onDoubleClick={() => handleRowDoubleClick(emp)} >
-                    <td>{emp.employeeName}</td>
-                    <td>{emp.department}</td>
-                    <td>{emp.employeeID}</td>
-                    <td>{emp.cnic}</td>
-                    <td>{emp.designation}</td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan="5">No matching employees found.</td>
-                </tr>
-              )}
-            </tbody>
+  {currentEmployees.length > 0 ? (
+    currentEmployees.map(emp => (
+      <tr key={emp.employeeID} onDoubleClick={() => handleRowDoubleClick(emp)}>
+        <td>
+          <input
+            type="checkbox"
+            checked={selectedEmployeeIds.includes(emp.employeeID)}
+            onChange={() => {
+              if (selectedEmployeeIds.includes(emp.employeeID)) {
+                setSelectedEmployeeIds(prev =>
+                  prev.filter(id => id !== emp.employeeID)
+                );
+              } else {
+                setSelectedEmployeeIds(prev => [...prev, emp.employeeID]);
+              }
+            }}
+          />
+        </td>
+        <td>{emp.employeeName}</td>
+        <td>{emp.department}</td>
+        <td>{emp.employeeID}</td>
+        <td>{emp.cnic}</td>
+        <td>{emp.designation}</td>
+      </tr>
+    ))
+  ) : (
+    <tr>
+      <td colSpan="6">No matching employees found.</td>
+    </tr>
+  )}
+</tbody>
+
           </table>
 
           <div className="pagination-controls">

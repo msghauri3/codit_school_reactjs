@@ -57,3 +57,38 @@
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+select {
+  margin-bottom: 10px;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+
+.dropdown-wrapper {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-wrapper label {
+  font-weight: 500;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.dropdown-wrapper select {
+  padding: 6px 10px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  background-color: #f8f9fa;
+  transition: border-color 0.3s ease;
+}
+
+.dropdown-wrapper select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #fff;
+}
+
