@@ -52,7 +52,7 @@ const handleGeneratePayroll = async () => {
       // employeeIds: selectedEmployeeIds,
       year: 2025,
       month: "May",
-      employeeIDs: ["121", "124"] // hardcoded
+       employeeIDs: selectedEmployeeIds  // ✅ matching backend key
     });
 
     console.log("Payroll Employees:", response.data);
