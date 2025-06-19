@@ -9,8 +9,22 @@ const EmployeeGrid = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const employeesPerPage = 5; // Show 5 records per page
 
+  // useEffect(() => {
+  //   axios.get('https://jsonplaceholder.typicode.com/users')
+  //     .then(response => {
+  //       setEmployees(response.data);
+  //       setLoading(false);
+  //     })
+  //     .catch(error => {
+  //       console.error("Error fetching employee data:", error);
+  //       setLoading(false);
+  //     });
+  // }, []);
+
+
+
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/users')
+    axios.get('http://103.175.122.31:83/api/Employees')
       .then(response => {
         setEmployees(response.data);
         setLoading(false);
@@ -20,6 +34,8 @@ const EmployeeGrid = () => {
         setLoading(false);
       });
   }, []);
+
+
 
   // Get current page data
   const indexOfLastEmployee = currentPage * employeesPerPage;
@@ -47,20 +63,21 @@ const EmployeeGrid = () => {
             <thead>
               <tr>
                 <th>Name</th>
-                <th>Email</th>
-                <th>Username</th>
-                <th>Company</th>
-                <th>Phone</th>
+               <th>Department</th>
+                <th>Employee No</th>
+               <th>CNIC</th>
+               <th>Designation</th>
               </tr>
             </thead>
             <tbody>
               {currentEmployees.map(emp => (
-                <tr key={emp.id}>
-                  <td>{emp.name}</td>
-                  <td>{emp.email}</td>
-                  <td>{emp.username}</td>
-                  <td>{emp.company.name}</td>
-                  <td>{emp.phone}</td>
+                  <tr key={emp.employeeID}>
+                  <td>{emp.employeeName}</td>
+                  <td>{emp.department}</td>
+                  <td>{emp.employeeID}</td>
+                  <td>{emp.cnic}</td>
+                  <td>{emp.designation}</td>
+                
                 </tr>
               ))}
             </tbody>

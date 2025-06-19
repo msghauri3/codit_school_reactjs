@@ -18,12 +18,16 @@ import HomeERP from './ERP_Home/Home';
 import HomeHRM from './HRM_Home/Home';
 import DashboardHRM from './HRM_Home/DashboardHRM';
 import EmployeesDetail from './HRM_Home/EmployeesDetail'
-import Payroll from './HRM_Home/Payroll';
+
 import Leaves from './HRM_Home/Leaves'
 import TaxSetup from './HRM_Home/TaxSetup'
 import Reports from './HRM_Home/Reports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
 import GeneralLedger from './Finance_Home/GeneralLedger';
+
+// Payroll
+import Payroll from './HRM_Home/Payroll';
+import UploadExcel from './Upload/UploadExcel'
 
 
 // Login
@@ -64,6 +68,7 @@ function AppRoutes() {
         <Route path="Leaves" element={<Leaves />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="Reports" element={<Reports />} />
+        <Route path="UploadExcel" element={<UploadExcel />} />
       </Route>
 
  

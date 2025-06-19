@@ -3,8 +3,10 @@ import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
 function Login() {
-  const [username, setUsername] = useState('emilys');
-  const [password, setPassword] = useState('emilyspass');
+  // const [username, setUsername] = useState('emilys');
+  // const [password, setPassword] = useState('emilyspass');
+   const [username, setUsername] = useState('admin');
+  const [password, setPassword] = useState('admin123');
   const [message, setMessage] = useState('');
   const navigate = useNavigate();
 
@@ -16,8 +18,7 @@ function Login() {
       const response = await axios.post('https://dummyjson.com/auth/login', {
         username: username.trim(),
         password: password.trim(),
-      });
-
+      });   
       console.log('Login Success:', response.data);
       localStorage.setItem('token', response.data.token);
       setMessage('Login successful!');
@@ -28,10 +29,31 @@ function Login() {
     }
   };
 
+const handleLoginBT = async (e) => {
+        e.preventDefault();
+        setMessage('Logging In ...')
+      try {
+        const response = await axios.post('http://103.175.122.31:83/api/Auth/login',{
+        username : username.trim(),
+        password : password.trim(),
+         });
+         console.log("Login Success", response.data);
+         localStorage.setItem('token', response.token)
+         setMessage("Login Successful");
+         navigate('/HRM/DashboardHRM');
+      } catch (error)
+        {
+          console.error('Login Error:', error.response?.data || error.message);
+          setMessage('❌ Login failed. Check username and password.');
+        }};
+
+
+
+
   return (
     <div style={{ maxWidth: '400px', margin: '40px auto', padding: '20px', border: '1px solid #ddd', borderRadius: '10px' }}>
       <h2>Login</h2>
-      <form onSubmit={handleLogin}>
+      <form onSubmit={handleLoginBT}>
         <div style={{ marginBottom: '15px' }}>
           <label>Username:</label>
           <input

@@ -43,6 +43,10 @@ function SideBarHRM() {
           <FaSignOutAlt className="me-2" style={{ color: '#b86bff' }} /> Reports
         </Nav.Link>
 
+        <Nav.Link as={NavLink} to="./UploadExcel" className="text-white">
+          <FaUserGraduate className="me-2" style={{ color: '#ffdd57' }} /> Upload File
+        </Nav.Link>
+
       </Nav>
     </div>
   );
