@@ -52,7 +52,7 @@ const handleGeneratePayroll = async () => {
       // employeeIds: selectedEmployeeIds,
       year: 2025,
       month: "May",
-       employeeIDs: selectedEmployeeIds  // ✅ matching backend key
+      employeeIDs: selectedEmployeeIds  // ✅ matching backend key
     });
 
     console.log("Payroll Employees:", response.data);
@@ -99,16 +99,24 @@ const handleGeneratePayroll = async () => {
     }}
   >
     <option value="">All Departments</option>
-    {Array.from(new Set(employees.map(emp => emp.department))).map(dept => (
-      <option key={dept} value={dept}>{dept}</option>
-    ))}
+   
+{Array.from(
+  new Set(
+    employees
+      .map(emp => emp.department)
+      .filter(dept => typeof dept === 'string' && dept.trim() !== '')
+  )
+).map(dept => (
+  <option key={dept} value={dept}>{dept}</option>
+))}
+
   </select>
 </div>
 
 
-<div style={{ marginBottom: '10px' }}>
+<div className="button-group">
   <button
-    className="btn btn-sm btn-outline-primary"
+    className="btn btn-sm btn-outline-primary action-btn"
     onClick={() => {
       const allIds = currentEmployees.map(emp => emp.employeeID);
       setSelectedEmployeeIds(allIds);
@@ -118,25 +126,21 @@ const handleGeneratePayroll = async () => {
   </button>
 
   <button
-    className="btn btn-sm btn-outline-secondary ms-2"
+    className="btn btn-sm btn-outline-secondary action-btn"
     onClick={() => setSelectedEmployeeIds([])}
   >
     Clear Selection
   </button>
 
-
-
-<button
-  className="btn btn-success mt-2"
-  onClick={handleGeneratePayroll}
-  disabled={selectedEmployeeIds.length === 0}
->
-  Generate Payroll
-</button>
-
-
-
+  <button
+    className="btn btn-sm btn-outline-success action-btn"
+    onClick={handleGeneratePayroll}
+    disabled={selectedEmployeeIds.length === 0}
+  >
+    Generate Payroll
+  </button>
 </div>
+
 
 
 

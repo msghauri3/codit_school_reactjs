@@ -92,3 +92,16 @@ select {
   background-color: #fff;
 }
 
+.button-group {
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.button-group .action-btn {
+  padding: 6px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  min-width: 120px;
+}

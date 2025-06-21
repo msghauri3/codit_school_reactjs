@@ -36,12 +36,19 @@ import EmployeesReports from './HRM_Home/EmployeesReports'
 import ChartOfAccount from './Finance_Home/ChartOfAccount'
 import GeneralLedger from './Finance_Home/GeneralLedger';
 
+
 // Payroll
-import Payroll from './HRM_Home/Payroll';
+import GeneratePayroll from './HRM_Home/GeneratePayroll';
 import UploadExcel from './Upload/UploadExcel'
 import PayrollEmp from './HRM_Home/PayrollEmp'
 import PayrollDept from './HRM_Home/PayrollDept'
 import DashboardPayroll from './HRM_Home/DashboardPayroll'
+import Payroll from './HRM_Home/Payroll'
+import AddTaxSlabsPayroll from './HRM_Home/AddTaxSlabsPayroll'
+import DeductionGridPayroll from './HRM_Home/DeductionGridPayroll'
+import TaxSlabGridPayroll from './HRM_Home/TaxSlabGridPayroll'
+import AddDeductionPayroll from './HRM_Home/AddDeducationPayroll';
+import AllPayrolls from './HRM_Home/AllPayrolls'
 
 
 
@@ -78,8 +85,8 @@ function AppRoutes() {
         <Route path="DashboardHRM" element={<DashboardHRM />} />
          <Route path="DashboardPayroll" element={<DashboardPayroll />} />
         <Route path="EmployeesDetail" element={<EmployeesDetail />} />     
-          <Route path="EmployeesSelection" element={<EmployeesSelection />} />     
-        <Route path="GeneratePayroll" element={<Payroll />} />
+        <Route path="EmployeesSelection" element={<EmployeesSelection />} />     
+        <Route path="GeneratePayroll" element={<GeneratePayroll />} />
         <Route path="Leaves" element={<Leaves />} />
          <Route path="DashboardLeaves" element={<DashboardLeaves />} />
         <Route path="TaxSetup" element={<TaxSetup />} />
@@ -97,7 +104,11 @@ function AppRoutes() {
         <Route path="EmployeeDetail/:id" element={<EmployeeDetail />} />
         <Route path="PayrollEmp" element={<PayrollEmp />} />    
         <Route path="PayrollDept" element={<PayrollDept />} />    
-
+        <Route path = "AddTaxSlabsPayroll" element={<AddTaxSlabsPayroll />} />
+        <Route path = "DeductionGridPayroll" element={<DeductionGridPayroll />} />
+        <Route path = "TaxSlabGridPayroll" element={<TaxSlabGridPayroll />} />
+        <Route path = "AddDeductionPayroll" element={<AddDeductionPayroll />} />
+        <Route path = "AllPayrolls" element={<AllPayrolls />} />
       </Route>
 
  
