@@ -17,7 +17,7 @@ import ProcurmentLayout from './Procurment_Home/Layout'
 import HomeERP from './ERP_Home/Home';
 import HomeHRM from './HRM_Home/Home';
 import DashboardHRM from './HRM_Home/DashboardHRM';
-import EmployeesDetail from './HRM_Home/EmployeesDetail'
+import EmployeesDetail from './HRM_Home/EmployeesList'
 import EmployeeDetail from './HRM_Home/EmployeeDetail'
 import EmployeesSelection from './HRM_Home/EmployeesSelection'
 
@@ -58,15 +58,22 @@ import PrivateRoute from './Components/PrivateRouts'
 
 import Axios1 from  './RND/Axios1'
 
+import EmployeeList from "./HRM_Home/EmployeesList";
+import EmployeeDetails from "./HRM_Home/EmployeeDetails";
+
+import PromotionsPayroll from "./HRM_Home/PromotionsPayroll" 
+
 
 function AppRoutes() {
   return (
     <Routes>
+     
+     
       <Route path="/" element={
     
          <PrivateRoute>
               <ERPLayout />
-             </PrivateRoute>
+        </PrivateRoute>
         }>
        
       </Route>
@@ -88,16 +95,16 @@ function AppRoutes() {
         <Route path="EmployeesSelection" element={<EmployeesSelection />} />     
         <Route path="GeneratePayroll" element={<GeneratePayroll />} />
         <Route path="Leaves" element={<Leaves />} />
-         <Route path="DashboardLeaves" element={<DashboardLeaves />} />
+        <Route path="DashboardLeaves" element={<DashboardLeaves />} />
         <Route path="TaxSetup" element={<TaxSetup />} />
         <Route path="Leaves" element={<Leaves />} />
-         <Route path="LeavesCasual" element={<LeavesCasual />} />
-         <Route path="LeavesCompensation" element={<LeavesCompensation />} />
-         <Route path="LeavesEarned" element={<LeavesEarned />} />
-         <Route path="LeavesMaternity" element={<LeavesMaternity />} />
-         <Route path="LeavesSick" element={<LeavesSick />} />
-         <Route path="LeavesSetup" element={<LeavesSetup />} />
-         <Route path="LeavesReports" element={<LeavesReports />} />
+        <Route path="LeavesCasual" element={<LeavesCasual />} />
+        <Route path="LeavesCompensation" element={<LeavesCompensation />} />
+        <Route path="LeavesEarned" element={<LeavesEarned />} />
+        <Route path="LeavesMaternity" element={<LeavesMaternity />} />
+        <Route path="LeavesSick" element={<LeavesSick />} />
+        <Route path="LeavesSetup" element={<LeavesSetup />} />
+        <Route path="LeavesReports" element={<LeavesReports />} />
         <Route path="Payroll" element={<Payroll />} />
         <Route path="EmployeesReports" element={<EmployeesReports />} />
         <Route path="UploadExcel" element={<UploadExcel />} />
@@ -109,6 +116,10 @@ function AppRoutes() {
         <Route path = "TaxSlabGridPayroll" element={<TaxSlabGridPayroll />} />
         <Route path = "AddDeductionPayroll" element={<AddDeductionPayroll />} />
         <Route path = "AllPayrolls" element={<AllPayrolls />} />
+
+        <Route path="employees" element={<EmployeeList />} />
+        <Route path="employees/:id" element={<EmployeeDetails />} />
+        <Route path = "PromotionsPayroll" element={<PromotionsPayroll />} />
       </Route>
 
  

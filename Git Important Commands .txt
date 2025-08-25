@@ -1,0 +1,8 @@
+git init
+git remote add origin https://github.com/USERNAME/REPOSITORY.git
+git remote -v (Optional)
+git add .
+git commit -m "Your commit message"
+git branch -M main
+git push -u origin main
+git pull origin main

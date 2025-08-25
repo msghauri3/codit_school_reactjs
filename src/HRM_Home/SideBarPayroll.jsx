@@ -28,19 +28,16 @@ function SideBarHRM() {
           <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> Dashboard
         </Nav.Link>
 
-        <Nav.Link as={NavLink} to="./PayrollEmp" end className="text-white">
-          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> Active Emp
+        <Nav.Link as={NavLink} to="./AllPayrolls" end className="text-white">
+          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> All Payrolls
         </Nav.Link>
-
 
        <Nav.Link as={NavLink} to="./GeneratePayroll" className="text-white">
           <FaUserTie className="me-2" style={{ color: '#b86bff' }} /> Generate Payroll
         </Nav.Link>
 
 
-        <Nav.Link as={NavLink} to="./AllPayrolls" end className="text-white">
-          <FaUserTie className="me-2" style={{ color: '#00d1b2' }} /> All Payrolls
-        </Nav.Link>
+        
 
         <Nav.Link as={NavLink} to="./TaxSlabGridPayroll" className="text-white">
           <FaPercentage className="me-2" style={{ color: '#ffdd57' }} /> Tax Slabs
@@ -71,6 +68,11 @@ function SideBarHRM() {
         <Nav.Link as={NavLink} to="/LeaveManagement" className="text-white">
           <FaGift className="me-2" style={{ color: '#ff851b' }} /> Increments
         </Nav.Link>
+
+
+        <Nav.Link as={NavLink} to="./PromotionsPayroll" className="text-white">
+          <FaGift className="me-2" style={{ color: '#ff851b' }} /> Promotions
+        </Nav.Link>   
 
         <Nav.Link as={NavLink} to="/Reports" className="text-white">
           <FaChartPie className="me-2" style={{ color: '#ff69b4' }} /> Reports

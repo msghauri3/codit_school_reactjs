@@ -4,6 +4,7 @@ import TopBarERP from './TopBar';
 import NavBarERP from './Navbar';
 import SidebarLayout from './SidebarLayout';
 import TopTopBarERP from './TopTopBar'
+import Home from './Home'
 
 export default function ERPLayout() {
   return (
@@ -11,9 +12,10 @@ export default function ERPLayout() {
       <TopBarERP />
       <NavBarERP />
       <div className="d-flex">
-        <SidebarLayout />
+      <SidebarLayout />
         <div className="flex-grow-1 p-3">
-        <Outlet />
+          <Home />
+          <Outlet />
         </div>
       </div>
     </>
