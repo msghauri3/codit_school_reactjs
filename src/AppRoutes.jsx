@@ -1,12 +1,19 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 
+
+
+import Home_Web from './Home_Web/App'
+import About from './Home_Web/pages/About' 
+
+
 // Layouts
 import ERPLayout from './ERP_Home/Layout';
 import HRMLayout from './HRM_Home/Layout';
 import RNDLayout from './HRM_Home/Layout';
 import FinanceLayout from './Finance_Home/Layout'
 import CRMLayout from './CRM_Home/Layout'
+
 
 import InventoryLayout from './Inventory_Home/Layout'
 import SupplyChainLayout from './SupplyChain_Home/Layout'
@@ -78,6 +85,17 @@ function AppRoutes() {
        
       </Route>
 
+
+      <Route path="/Home" element={        
+        <PrivateRoute>
+          <Home_Web />             
+        </PrivateRoute>
+      }>
+        {/* Nested route for About */}
+        <Route path="about" element={<About />} />
+      </Route>
+      
+     
      <Route path="/Login" element={<Login />}>
                
      </Route>
